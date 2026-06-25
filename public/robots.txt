@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://barghouth.me/sitemap.xml
+Host: barghouth.me

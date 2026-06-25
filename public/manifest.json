@@ -1,0 +1,21 @@
+{
+  "name": "barghouth.me",
+  "short_name": "Barghouth",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111F",
+  "theme_color": "#00D4FF",
+  "description": "Portfolio of GIS Team Leader Saad Barghouth, offering enterprise GIS, automation, and stakeholder-ready mapping solutions.",
+  "icons": [
+    {
+      "src": "/logooo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logooo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
