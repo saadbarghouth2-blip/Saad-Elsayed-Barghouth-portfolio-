@@ -112,23 +112,22 @@ export default function Hero() {
       {/* Content */}
       <div
         ref={contentRef}
-        className="absolute inset-0 z-[6] flex flex-col justify-end pb-4 sm:pb-8 site-gutter"
+        className="absolute inset-0 z-[6] flex flex-col justify-end pt-24 pb-4 sm:pb-8 site-gutter"
       >
         <div className="w-full max-w-6xl">
           <div className="hero-panel text-shadow p-0 sm:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end">
               <div className="lg:col-span-7">
-                <h1 className="hero-item font-display font-bold text-[clamp(36px,9vw,88px)] sm:text-[clamp(44px,7vw,88px)] text-slate-50 leading-[0.98] text-balance">
+                <h1 className="hero-item font-display font-bold text-[clamp(30px,8.2vw,88px)] sm:text-[clamp(44px,7vw,88px)] text-slate-50 leading-[1.02] sm:leading-[0.98] text-balance">
                   Saad Elsayed Barghouth
                 </h1>
 
-                <p className="hero-item mt-4 max-w-3xl text-base sm:text-xl text-slate-200 leading-relaxed">
-                  GIS Team Leader and Web GIS Developer building ArcGIS dashboards,
-                  enterprise geodatabases, spatial automation, and React GIS apps.
+                <p className="hero-item mt-4 max-w-2xl text-sm sm:text-xl text-slate-200 leading-relaxed">
+                  GIS delivery, Web GIS apps, and automation that turn spatial data into clear decisions.
                 </p>
 
-                <div className="hero-item mt-5 flex flex-wrap gap-2 text-xs sm:text-sm text-slate-200">
-                  {["GIS Consultant", "Web GIS Developer", "ArcGIS Dashboards", "React GIS Apps"].map((label) => (
+                <div className="hero-item mt-4 flex flex-wrap gap-2 text-xs sm:text-sm text-slate-200">
+                  {["GIS", "Web GIS", "Automation"].map((label) => (
                     <span
                       key={label}
                       className="inline-flex rounded-full border border-teal/25 bg-teal/10 px-3 py-1 text-teal"
@@ -138,7 +137,7 @@ export default function Hero() {
                   ))}
                 </div>
 
-                <div className="hero-item mt-8 flex flex-col sm:flex-row sm:items-center flex-wrap gap-3">
+                <div className="hero-item mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center flex-wrap gap-3">
                   <button
                     type="button"
                     onClick={() => navigate('/projects')}

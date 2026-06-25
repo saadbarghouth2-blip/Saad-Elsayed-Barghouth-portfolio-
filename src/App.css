@@ -405,6 +405,84 @@ section,
   }
 }
 
+@media (max-width: 640px) {
+  #hero {
+    min-height: 100svh;
+  }
+
+  #hero .site-gutter {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  #hero .hero-panel {
+    width: 100%;
+  }
+
+  #hero h1 {
+    max-width: 9.5em;
+  }
+
+  #hero p {
+    max-width: 24rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  #hero .hero-item.mt-4.flex {
+    gap: 0.45rem;
+  }
+
+  #hero .hero-item.mt-4.flex span {
+    padding: 0.32rem 0.72rem;
+    font-size: 0.78rem;
+    line-height: 1.15;
+  }
+
+  #hero .button-cta {
+    width: 100%;
+    min-height: 3.25rem;
+    border-radius: 0.8rem;
+    padding-top: 0.72rem;
+    padding-bottom: 0.72rem;
+  }
+
+  #hero .hero-item.mt-5.flex {
+    gap: 0.65rem;
+  }
+
+  #hero .hero-item.mt-5.flex > * {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 640px) and (max-height: 700px) {
+  #hero .hero-item.mt-4.flex,
+  #hero .hero-item.mt-5.flex,
+  #hero [aria-label="Scroll to explore content"] {
+    display: none;
+  }
+
+  #hero p {
+    margin-top: 0.75rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  #hero .hero-item.mt-6 {
+    margin-top: 1rem;
+  }
+
+  #hero .button-cta {
+    min-height: 2.85rem;
+    padding-top: 0.58rem;
+    padding-bottom: 0.58rem;
+  }
+}
+
 .nav-pill {
   transition-timing-function: cubic-bezier(0.2, 0.9, 0.2, 1);
 }
@@ -876,8 +954,8 @@ section,
   #hero h1,
   .hero-panel h1,
   .font-display.text-display-1 {
-    font-size: clamp(26px, 8.5vw, 40px) !important;
-    line-height: 1.02 !important;
+    font-size: clamp(27px, 8vw, 34px) !important;
+    line-height: 1.06 !important;
     letter-spacing: -0.01em;
   }
 
