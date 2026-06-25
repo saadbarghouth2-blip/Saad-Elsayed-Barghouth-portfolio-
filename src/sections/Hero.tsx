@@ -122,6 +122,21 @@ export default function Hero() {
                   Saad Elsayed Barghouth
                 </h1>
 
+                <p className="hero-item mt-4 max-w-3xl text-base sm:text-xl text-slate-200 leading-relaxed">
+                  GIS Team Leader and Web GIS Developer building ArcGIS dashboards,
+                  enterprise geodatabases, spatial automation, and React GIS apps.
+                </p>
+
+                <div className="hero-item mt-5 flex flex-wrap gap-2 text-xs sm:text-sm text-slate-200">
+                  {["GIS Consultant", "Web GIS Developer", "ArcGIS Dashboards", "React GIS Apps"].map((label) => (
+                    <span
+                      key={label}
+                      className="inline-flex rounded-full border border-teal/25 bg-teal/10 px-3 py-1 text-teal"
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="hero-item mt-8 flex flex-col sm:flex-row sm:items-center flex-wrap gap-3">
                   <button

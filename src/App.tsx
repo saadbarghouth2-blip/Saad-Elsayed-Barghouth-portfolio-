@@ -8,6 +8,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import ScrollProgress from '@/components/ScrollProgress';
 import RouteTransition from '@/components/RouteTransition';
 import InteractionLayer from '@/components/InteractionLayer';
+import Seo from '@/components/Seo';
 import HomePage from '@/pages/HomePage';
 import { prefetchRoute } from '@/lib/route-prefetch';
 import Footer from '@/sections/Footer';
@@ -70,6 +71,7 @@ function App() {
 
   return (
     <div className="relative bg-navy min-h-screen">
+      <Seo />
       <ScrollToTop />
       <ScrollProgress />
       <InteractionLayer />

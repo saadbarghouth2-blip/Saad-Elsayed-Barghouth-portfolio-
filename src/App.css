@@ -7,6 +7,19 @@
 section {
   position: relative;
   width: 100%;
+  max-width: 100%;
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Pin spacer styling */
@@ -331,6 +344,12 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+}
+
+main,
+section,
+.site-gutter {
+  min-width: 0;
 }
 
 /* Grid pattern animation */
@@ -668,6 +687,29 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Mobile baseline tuning across all pages */
 @media (max-width: 640px) {
+  .site-gutter {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  main,
+  section,
+  section > div,
+  .site-gutter > *,
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
   .py-24 {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -684,17 +726,65 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   .text-display-1 {
-    font-size: clamp(32px, 8.5vw, 46px);
-  }
-
-  .text-display-2 {
-    font-size: clamp(26px, 7.2vw, 36px);
+    font-size: clamp(28px, 8vw, 40px);
     line-height: 1.06;
   }
 
+  .text-display-2 {
+    font-size: clamp(24px, 6.8vw, 32px);
+    line-height: 1.08;
+  }
+
   .text-display-3 {
-    font-size: clamp(22px, 6.2vw, 30px);
+    font-size: clamp(20px, 5.8vw, 28px);
     line-height: 1.1;
+  }
+
+  section h1 span,
+  section h2 span,
+  section h3 span {
+    max-width: 100%;
+  }
+
+  section p {
+    max-width: 100%;
+  }
+
+  section button,
+  section a,
+  section span {
+    max-width: 100%;
+  }
+
+  section button,
+  section a,
+  section label,
+  section input,
+  section textarea,
+  section select,
+  section .inline-flex,
+  section [class*="rounded"] {
+    min-width: 0;
+  }
+
+  section input,
+  section textarea,
+  section select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  section .inline-flex {
+    white-space: normal;
+  }
+
+  section .whitespace-nowrap:not(.nav-pill) {
+    white-space: normal;
+  }
+
+  section [class*="overflow-x-auto"] {
+    max-width: 100%;
+    min-width: 0;
   }
 
   section {
@@ -705,6 +795,71 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  #about .mobile-card-grid,
+  #home .mobile-card-grid,
+  #gallery .mobile-card-grid,
+  #experience .mobile-card-grid,
+  #testimonials .mobile-card-grid,
+  #projects .mobile-card-grid,
+  #process .mobile-card-grid,
+  #process-details .mobile-card-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #projects .project-card,
+  #projects [data-testid="projects-grid"] > *,
+  #experience .mobile-compact-card,
+  #testimonials .mobile-compact-card,
+  #gallery .mobile-compact-card,
+  #about .mobile-compact-card,
+  #home .mobile-compact-card,
+  #process .step-item,
+  #process-details .mobile-compact-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #projects .project-card p,
+  #projects .project-card span,
+  #projects li,
+  #experience p,
+  #experience span,
+  #testimonials p,
+  #testimonials span,
+  #gallery p,
+  #gallery span,
+  #about p,
+  #about span,
+  #home p,
+  #home span {
+    overflow-wrap: anywhere;
+  }
+
+  #projects [data-testid="projects-grid"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #projects .project-card .truncate,
+  #projects .truncate,
+  #process-details .truncate {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  #projects button,
+  #projects a,
+  #experience button,
+  #experience a,
+  #testimonials button,
+  #testimonials a,
+  #gallery button,
+  #gallery a {
+    max-width: 100%;
   }
 }
 
@@ -728,7 +883,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* Improve readability: reduce leading of large display text */
   .text-display-2 {
-    font-size: clamp(20px, 5.6vw, 32px);
+    font-size: clamp(22px, 6.2vw, 30px);
   }
 
   /* Make primary CTAs easier to tap */
@@ -909,6 +1064,50 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 640px) {
+  .mobile-card-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  .mobile-card-grid > * {
+    width: 100%;
+  }
+
+  .mobile-compact-card {
+    padding: 0.9rem !important;
+  }
+
+  .mobile-compact-card p {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
+    overflow: visible;
+  }
+
+  #process h2,
+  #process-details h2 {
+    max-width: 100%;
+  }
+
+  #process h2 > span:first-child,
+  #process-details h2 > span:first-child {
+    font-size: clamp(26px, 7.2vw, 34px) !important;
+    line-height: 1.08 !important;
+  }
+
+  #process .step-item {
+    align-items: flex-start;
+  }
+
+  #process .step-item span,
+  #process .step-item p,
+  #process-details li,
+  #process-details span {
+    overflow-wrap: anywhere;
+  }
+}
+
 @media (max-width: 380px) {
   .mobile-card-grid {
     gap: 0.55rem !important;
@@ -996,5 +1195,47 @@ p, h1, h2, h3, h4, h5, h6 {
 
   .story-item .story-copy {
     min-width: 0;
+  }
+}
+
+#contact .contact-links-grid {
+  align-items: stretch;
+}
+
+#contact .contact-link-card {
+  min-width: 0;
+  width: 100%;
+}
+
+#contact .contact-link-icon {
+  flex: 0 0 auto;
+}
+
+#contact .contact-link-value {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  #contact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  #contact .contact-links-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #contact .contact-link-card {
+    min-height: 72px;
+    padding: 0.9rem !important;
+  }
+
+  #contact .contact-link-card p {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
   }
 }

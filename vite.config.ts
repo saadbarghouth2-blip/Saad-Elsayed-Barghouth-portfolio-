@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   const isProd = mode === "production";
 
   return {
-    base: "./",
+    base: "/",
     // `inspectAttr` is great for dev, but it bloats the DOM and output in production.
     plugins: [!isProd && inspectAttr(), react()],
     resolve: {

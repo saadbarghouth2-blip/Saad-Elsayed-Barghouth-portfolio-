@@ -210,25 +210,26 @@ export default function Contact() {
       {/* Noise Overlay */}
       <div className="absolute inset-0 noise-overlay z-[3]" />
 
-      <div className="relative z-[4] px-[10vw]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="relative z-[4] site-gutter">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left Content */}
           <div ref={contentRef}>
             <h2 className="font-display font-bold text-display-2 text-slate-50 mb-6">
               Let's map your next project.
             </h2>
             <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-              Whether you need enterprise GIS solutions, web-based mapping applications, or custom frontend interfaces, I'm here to help. Let's discuss how we can turn your 
-              spatial data and design visions into actionable solutions.
+              Hire Saad Barghouth for GIS, Web GIS, ArcGIS dashboards, geodatabase QA/QC,
+              spatial data automation, and React GIS applications. Let's discuss how we can turn
+              your spatial data and design vision into actionable solutions.
             </p>
 
             {/* Contact Links */}
-            <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mb-10 mobile-card-grid">
+            <div className="contact-links-grid grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-10">
               <a
                 href={ASK_SAAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-item mobile-compact-card col-span-2 group relative flex items-center gap-3 sm:gap-4 overflow-hidden rounded-lg border border-teal/35 bg-teal/10 p-3 sm:p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-teal/55 hover:bg-teal/15"
+                className="contact-item contact-link-card sm:col-span-2 group relative flex items-center gap-3 sm:gap-4 overflow-hidden rounded-lg border border-teal/35 bg-teal/10 p-3 sm:p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-teal/55 hover:bg-teal/15"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-teal/10 via-transparent to-coral/10 opacity-80" />
                 <div className="relative z-[1] w-11 h-11 bg-teal/15 border border-teal/30 rounded-lg flex items-center justify-center text-teal group-hover:bg-teal/25 transition-colors duration-300">
@@ -256,16 +257,16 @@ export default function Contact() {
                     href={link.href}
                     target={link.href.startsWith('http') ? '_blank' : undefined}
                     rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className={`contact-item mobile-compact-card flex items-center gap-2.5 sm:gap-4 p-2.5 sm:p-3 bg-slate-800/20 border border-slate-700/30 rounded-lg transition-all duration-300 group ${link.color}`}
+                    className={`contact-item contact-link-card flex items-center gap-2.5 sm:gap-4 p-3 bg-slate-800/20 border border-slate-700/30 rounded-lg transition-all duration-300 group ${link.color}`}
                   >
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-slate-700/50 rounded-lg flex items-center justify-center group-hover:bg-slate-600/50 transition-colors duration-300">
+                    <div className="contact-link-icon w-9 h-9 sm:w-10 sm:h-10 bg-slate-700/50 rounded-lg flex items-center justify-center group-hover:bg-slate-600/50 transition-colors duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="font-mono text-xs text-slate-500 uppercase tracking-wide">
                         {link.label}
                       </p>
-                      <p className="text-slate-200 transition-colors duration-300 truncate">
+                      <p className="contact-link-value text-slate-200 transition-colors duration-300">
                         {link.value}
                       </p>
                     </div>
