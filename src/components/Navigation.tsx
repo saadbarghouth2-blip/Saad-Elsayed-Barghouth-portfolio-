@@ -341,7 +341,7 @@ export default function Navigation() {
               hasSolidNav ? 'py-1.5 sm:py-2.5' : 'py-2 sm:py-3'
             )}
           >
-            <div className="nav-inner w-full max-w-7xl mx-auto flex items-center justify-between gap-4 pr-14 lg:pr-0">
+            <div className="nav-inner relative w-full max-w-7xl mx-auto flex items-center justify-between gap-4 pr-16 lg:pr-0">
           {/* Logo */}
           <button
             type="button"
@@ -628,7 +628,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="mobile-menu-button-wrap fixed right-4 top-2 z-[120] flex shrink-0 items-center justify-end sm:right-6 sm:top-3 lg:hidden">
+          <div className="mobile-menu-button-wrap absolute right-3 top-1/2 z-[2] flex -translate-y-1/2 shrink-0 items-center justify-end sm:right-4 lg:hidden">
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
