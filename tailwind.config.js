@@ -49,9 +49,9 @@ module.exports = {
           light: '#67E8FF',
         },
         coral: {
-          DEFAULT: '#A3E635',
-          dark: '#84CC16',
-          light: '#BEF264',
+          DEFAULT: '#38BDF8',
+          dark: '#0284C7',
+          light: '#7DD3FC',
         },
         slate: {
           50: '#F4F6FA',
@@ -86,7 +86,7 @@ module.exports = {
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         glow: "0 0 30px rgba(0, 212, 255, 0.24)",
-        'glow-lg': "0 0 50px rgba(163, 230, 53, 0.26)",
+        'glow-lg': "0 0 50px rgba(56, 189, 248, 0.28)",
       },
       keyframes: {
         "accordion-down": {
